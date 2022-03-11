@@ -42,3 +42,17 @@ provider "azurerm" {
   location            = each.value.location  
 
 }
+  
+  ####### Select Region Based locals #######
+locals {
+  locals_map_spoke = {
+    "centralus" = {
+      speer = local.test_centralus_spoke_peering_data   
+      
+    }
+    "eastus2" = {
+      speer = local.test_eastus2_spoke_peering_data
+    }
+  }
+  spoke_peering_data = lookup(local.locals_map_spoke, var.location).speer  
+}
