@@ -13,3 +13,23 @@ locals {
     }
 
   }
+  
+  # azurerm provider used for hub and spoke peering
+provider "azurerm" {  
+  alias           = "spoke"
+  subscription_id = var.az_sub_id_spoke
+  tenant_id       = var.az_tenant_id
+  client_id       = var.az_client_id_network
+  client_secret   = var.az_client_secret_network
+  features {}
+}
+  
+  terraform {
+  required_version = ">= 0.15.0"
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "2.96.0"
+    }
+  }
+}
