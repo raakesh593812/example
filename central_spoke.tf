@@ -33,3 +33,12 @@ provider "azurerm" {
     }
   }
 }
+  
+  resource "azurerm_resource_group" "spokenetworking" {
+  provider = azurerm.spoke
+
+  for_each            = local.spoke_peering_data
+  name                = each.value.target_vnet_rg
+  location            = each.value.location  
+
+}
