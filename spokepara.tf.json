@@ -1,0 +1,44 @@
+{
+  "locals": [
+    {
+      "test_centralus_spoke_peering_data": [
+        {
+          "test1": [
+            {
+              "addresesSpace": "10.216.62.0/23",
+              "allow_forwarded_traffic": true,
+              "allow_gateway_transit": true,
+              "allow_virtual_network_access": true,
+              "app_code": "9DN7Q~CsyKS13G2OyNrTBqGqK~iOa4hexc~BE",
+              "app_id": "550b2c52-7eb5-47af-a23f-4a292bd7c2d6",
+              "location": "centralus",
+              "spoke_name": "spoke_a",
+              "sub_id": "7493c606-7d9a-48cb-8bb3-eca30de998c9",
+              "target_vnet_name": "cus-networking-test1-vnet",
+              "target_vnet_rg": "cus-networking-test1-rg",
+              "tenent_id": "9e4857ba-de33-4c52-9c2c-60ace8819252",
+              "use_remote_gateways": false
+            }
+          ],
+          "test2": [
+            {
+              "addresesSpace": "10.216.63.0/23",
+              "allow_forwarded_traffic": true,
+              "allow_gateway_transit": true,
+              "allow_virtual_network_access": true,
+              "app_code": "e1-7Q~HSK5BSfOJpUGqQwN_F0LG9LTlx7yQs3",
+              "app_id": "0beb1a55-e620-48b9-80cc-35832ff88a88",
+              "location": "centralus",
+              "spoke_name": "spoke_b",
+              "sub_id": "7493c606-7d9a-48cb-8bb3-eca30de998c9",
+              "target_vnet_name": "cus-networking-test2-vnet",
+              "target_vnet_rg": "cus-networking-test1-rg",
+              "tenent_id": "9e4857ba-de33-4c52-9c2c-60ace8819252",
+              "use_remote_gateways": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
